@@ -5,7 +5,7 @@
 # visualise
 # analyse
 ################
-#analyse data#
+#analyse data#    T-test
 ################
 
 
@@ -60,3 +60,11 @@ gapminder %>%
 gapminder %>% 
   filter(continent %in% c("Africa","Europe")) %>% 
   t.test(lifeExp~continent, data=., alternative="two.sided") # here ~ means the life expentancy by continent 
+
+
+#one sided test for difference of mean
+
+gapminder %>% 
+  filter(country %in% c("Ireland","Bangladesh")) %>% 
+  t.test(lifeExp~country, data=., alternative="less",conf.level = 0.95)
+
