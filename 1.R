@@ -78,3 +78,32 @@ sw <- sw %>%
   select(name,hair_color,eye_color) %>% 
   rename(h_color= hair_color)
 sw
+
+msleep
+my_sleep_data <- msleep %>% 
+    select(name, sleep_total) %>%  
+    #filter(name %in% c("Cow","Dog")) %>% 
+    filter(between(sleep_total,16,18 )) %>%  
+    filter(near(sleep_total, 17, tol=0.5)) %>%   # near 0.5 value 
+    filter(is.na(conservation))
+ 
+my_sleep_data
+
+
+my_age <- 12
+
+
+install.packages("mtcars")
+library(mtcars)
+?mtcars
+
+
+cars<- mtcars
+hist(cars$speed)
+plot(cars$speed,cars$dist)
+summary(cars)
+class(cars$speed)
+length(cars$speed)
+unique(cars$speed)
+cars[1,1]
+cars
