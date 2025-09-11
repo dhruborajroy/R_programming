@@ -30,8 +30,8 @@ msleep %>%
 
 
 msleep %>% 
-  filter(vore=="herbi" | vore=="omni") %>% 
-  filter(vore %in% c("carni", "omni")) %>% 
+  #filter(vore=="herbi" | vore=="omni") %>% 
+  #filter(vore %in% c("carni", "omni")) %>% 
   drop_na(vore) %>% 
   ggplot(aes(sleep_total,color=vore,fill=vore))+
   geom_density(alpha=0.2)
