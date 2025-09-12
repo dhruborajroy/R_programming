@@ -71,3 +71,4 @@ gapminder %>%
   aov(lifeExp ~ continent, data=. ) %>% 
   TukeyHSD() %>%  #combination of two continent
   plot()
+

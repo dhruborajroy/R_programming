@@ -1,0 +1,8 @@
+Top packages for R programming - https://rpubs.com/drgregmartin/1250204
+Lubridate and ggplot- https://rpubs.com/drgregmartin/1291933
+Themes- https://rpubs.com/drgregmartin/1274526
+Life Expectancy https://rpubs.com/drgregmartin/1266359
+Customize with YAML - https://rpubs.com/drgregmartin/1266674
+Narrative Elements - https://rpubs.com/drgregmartin/1266671
+Chunk Options- https://rpubs.com/drgregmartin/1266667
+Hello Quarto- https://rpubs.com/drgregmartin/1257751
