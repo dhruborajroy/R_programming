@@ -1,4 +1,11 @@
 library(tidyverse)
+library(forcats)
+library(patchwork)
+
+
+
+
+
 
 data()
 
@@ -29,12 +36,10 @@ Orange %>%
   
   
   
-  library(forcats)
-  library(patchwork)
   
   
   #AGE and proption graph but not a standard practice
-  gss_cat %>% 
+gss_cat %>% 
     filter(!is.na(age)) %>% 
     filter(marital %in% c("Never married","Married","Widowed")) %>% 
     count(age, marital) %>% 
@@ -42,13 +47,13 @@ Orange %>%
     mutate(prop=n/sum(n)) %>%  
     ggplot(aes(x=age, y= prop,color=marital))+
     geom_line(size=2,na.rm = TRUE)
-  geom_point(size=5,alpha=0.5)+
+    geom_point(size=5,alpha=0.5)+
     theme_bw()
   
   
   
   #AGE and proption graph but not a standard practice
-  gss_cat %>% 
+gss_cat %>% 
     filter(!is.na(age)) %>% 
     filter(marital %in% c("Never married","Married","Widowed")) %>% 
     count(age, marital) %>% 
@@ -58,7 +63,7 @@ Orange %>%
     mutate(marital=fct_rev(marital)) %>% 
     ggplot(aes(x=age, y= prop,color=marital))+
     geom_line(size=2,na.rm = TRUE)
-  geom_point(size=5,alpha=0.5)+
+    geom_point(size=5,alpha=0.5)+
     theme_bw()
   
   

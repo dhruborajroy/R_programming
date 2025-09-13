@@ -1,0 +1,42 @@
+---
+title: "First Quarto"
+author: "Dhruboraj Roy"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+::: callout-caution
+Code that is excluded from the final doc
+:::
+
+```{r echo =TRUE,message=FALSE,warning=FALSE,label=fig-starwars, fig.cap="Relationship between height and mass of starwars characters"}
+library(tidyverse)
+starwars %>% 
+  filter(mass<100) %>% 
+  ggplot(aes(mass,height))+
+  geom_point(size=3,alpha=0.5,aes(color=gender))+
+  geom_smooth()+theme_bw()
+```
+
+Here is references @fig-starwars\

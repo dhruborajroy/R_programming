@@ -18,3 +18,15 @@ msleep %>%
   geom_histogram(binwidth=5,fill="#97b3C6")+
   theme_bw()+
   coord_flip()
+
+
+#beautiful Bar Chart 
+msleep %>% 
+  drop_na(vore) %>% 
+  ggplot(aes(x=vore,))+
+  geom_bar(aes(fill=vore))+
+  scale_fill_brewer(palette="Set3")+
+  theme_bw()+
+  labs(x="df",y="s",title="spee")
+coord_flip()
+
