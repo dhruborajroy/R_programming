@@ -77,8 +77,8 @@ ggplot(atlas) +
     breaks = seq(0.65, 0.95, 0.05),
     direction = 1,
     palette = "YlGnBu") +
-  labs(title = "HDI in Sao Paulo, BR (2010)") +
-  theme(# Legend
+    labs(title = "HDI in Sao Paulo, BR (2010)") +
+    theme(# Legend
     legend.position = "bottom",
     legend.key.width = unit(1.7, "cm"),
     legend.text = element_text(size = 11),

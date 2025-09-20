@@ -1,7 +1,7 @@
-install.packages("gtsummary")
-
-library(tidyverse)
-library(gtsummary)
+#install.packages("gtsummary")
+  
+  library(tidyverse)
+  library(gtsummary)
 
 trial
 d<-trial %>% 

@@ -9,7 +9,6 @@ iris %>%
 
 
 #insert icon and graphics on the table 
-
 mtcars %>% 
   group_by(cyl) %>% 
   summarise(Median=round(median(mpg),2),
